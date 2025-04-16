@@ -1,30 +1,381 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire d'inscription</title>
+    <title>Mon Portfolio | Développeur Créatif</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="form-container">
-        <h2>Formulaire d'inscription</h2>
-        <form method="POST" action="index.html">
-            <div class="form-group">
-                <label for="name">Nom:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Mot de passe:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <button type="submit">S'inscrire</button>
-        </form>
+    <div id="cookie-consent-banner" style="
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #222;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  font-family: sans-serif;
+  z-index: 9999;
+  display: none;
+">
+  Ce site utilise des cookies pour analyser votre interaction. 
+  <button id="accept-consent" style="margin-left: 10px; background: #4CAF50; color: white; border: none; padding: 8px 12px; cursor: pointer;">Accepter</button>
+</div>
+
+    <!-- Animation de fond -->
+    <div class="bg-animation">
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+        <div class="bubble bubble-3"></div>
+        <div class="bubble bubble-4"></div>
+        <div class="bubble bubble-5"></div>
     </div>
+
+    <!-- Barre de navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="images/logo.png" alt="Pouina Enterprises Logo" style="height: 50px;">
+            </a>
+            <div class="nav-links">
+                <a href="#accueil">Accueil</a>
+                <a href="#apropos">À propos</a>
+                <a href="#competences">Compétences</a>
+                <a href="#projets">Projets</a>
+                <a href="#contact">Contact</a>
+                <div class="nav-indicator"></div>
+            </div>
+            <button class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Section Accueil -->
+    <section id="accueil" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-word title-word-1">Bonjour, </span>
+                    <span class="title-word title-word-2">Je suis </span>
+                    <span class="title-word title-word-3">Ibrahim Konta</span>
+                </h1>
+                <h2 class="hero-subtitle">Développeur Full Stack & Designer UI/UX</h2>
+                <p class="hero-text">Je crée des expériences digitales mémorables et des solutions web performantes.</p>
+                <div class="hero-buttons">
+                    <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+                    <a href="#contact" class="btn btn-secondary">Me contacter</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <img src="images/moi.jpg" alt="Photo de profil" class="profile-img">
+                    <div class="tech-icons">
+                        <i class="fab fa-html5"></i>
+                        <i class="fab fa-css3-alt"></i>
+                        <i class="fab fa-js"></i>
+                        <i class="fab fa-react"></i>
+                        <i class="fab fa-node-js"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section id="apropos" class="about">
+        <div class="container">
+            <h2 class="section-title">À propos de moi</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        <p>🌟Profil Professionnel </p>
+                        Ingénieur logiciel et développeur full-stack passionné par la création d'applications performantes et évolutives. Je maîtrise les technologies front-end (React, Angular, HTML, CSS, JavaScript) et back-end (PHP, Python, Spring Boot, Kotlin, Java), ainsi que les bases de données SQL et NoSQL. Expérimenté en gestion de projet, architecture logicielle et analyse de données, je collabore efficacement en équipe. Passionné par l'innovation, la performance et la sécurité, je cherche à développer des solutions impactantes.
+                        ✨ Ouvert aux collaborations dans tous les domaines informatiques</p>
+                    <p></p>
+                    <p></p>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <span class="info-label">Nom :</span>
+                            <span class="info-value">Ibrahim Konta</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Email:</span>
+                            <span class="info-value">kontaibrahim044@gmail.com</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Expérience:</span>
+                            <span class="info-value">2+ ans</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Localisation:</span>
+                            <span class="info-value">Bamako, Mali</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-skills">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>HTML/CSS</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="95"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>JavaScript</span>
+                            <span>60%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>React</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="80"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Node.js</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="75"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Compétences -->
+    <section id="competences" class="skills">
+        <div class="container">
+            <h2 class="section-title">Mes compétences</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Développement Web</h3>
+                    <p>Création de sites web responsive et applications web modernes avec les dernières technologies.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Design Responsive</h3>
+                    <p>Conception d'interfaces qui s'adaptent parfaitement à tous les appareils et tailles d'écran.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>Création d'expériences utilisateur intuitives et d'interfaces visuellement attrayantes.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Backend</h3>
+                    <p>Développement d'API robustes et de systèmes backend performants et sécurisés.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projets" class="projects">
+        <div class="container">
+            <h2 class="section-title">Mes projets récents</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/artisan.png" alt="Projet 1">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                            <a href="#" class="project-github"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Clone de site ArtisanMalien.com</h3>
+                        <p>Plateforme complète avec la possibilite d'ajout des artisans avec un dashboard admin.</p>
+                        <div class="project-tags">
+                            <span>Php</span>
+                            <span>Html</span>
+                            <span>Mysql</span>
+                            <span>Javascript</span>
+                            <span>Ajax</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/interface.png" alt="Projet 2">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                            <a href="#" class="project-github"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Logiciel de gestion de stock</h3>
+                        <p>Plateforme de gestion de vente pour les commercants, pharmaciens et autres types de gestion.</p>
+                        <div class="project-tags">
+                            <span>Php</span>
+                            <span>Html</span>
+                            <span>Mysql</span>
+                            <span>Javascript</span>
+                            <span>Ajax</span>
+                            <span>Tailwind CSS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400" alt="Projet 3">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                            <a href="#" class="project-github"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Application Météo</h3>
+                        <p>Application météo en temps réel avec prévisions sur 5 jours et géolocalisation.</p>
+                        <div class="project-tags">
+                            <span>JavaScript</span>
+                            <span>API REST</span>
+                            <span>CSS3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="projects-more">
+                <a href="#" class="btn btn-primary">Voir plus de projets</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contactez-moi</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-text">
+                            <h3>Email</h3>
+                            <p>kontaibrahim044@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-text">
+                            <h3>Téléphone</h3>
+                            <p>+223 64-26-03-37 & 77-54-83-49</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-text">
+                            <h3>Localisation</h3>
+                            <p>Bamako, Mali</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#https://github.com/Konta-Ibrahim"><i class="fab fa-github"></i></a>
+                        <a href="#https://www.linkedin.com/feed/"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Votre nom" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Votre email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Sujet">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Votre message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Envoyer le message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h1>Pouina-Corps</h1>
+                    <a href="#">
+                        <img src="images/logo.png" alt="Pouina Enterprises Logo" style="height: 140px; width: 250px; border-radius: 20px;">
+                    </a>
+                    <p>Création de solutions digitales innovantes et sur mesure.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                        <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                        <li><a href="mailto:upass496@gmail.com"><i class="fas fa-envelope"></i> <strong>upass496@gmail.com</strong></a></li>
+                        <li><a href="tel:+22377548349"><i class="fas fa-phone"></i> +22377548349</a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        
+
+
+
+
+
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Abonnez-vous pour recevoir mes dernières actualités.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Votre email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Mon Portfolio. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bouton retour en haut -->
+    <a href="#accueil" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="script.js"></script>
 </body>
 </html>

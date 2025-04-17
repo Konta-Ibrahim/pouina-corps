@@ -255,3 +255,7 @@ function logAndSend(action) {
   
   // Lancement
   startLoggingIfConsented();
+
+
+
+  

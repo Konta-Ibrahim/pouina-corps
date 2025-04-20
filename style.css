@@ -858,16 +858,21 @@ img {
 
 .newsletter-form {
     display: flex;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .newsletter-form input {
     flex: 1;
+    min-width: 0;
     padding: 12px 15px;
     border: none;
     border-radius: var(--border-radius) 0 0 var(--border-radius);
     font-family: inherit;
     font-size: 1rem;
     outline: none;
+    box-sizing: border-box;
 }
 
 .newsletter-form button {
@@ -878,11 +883,26 @@ img {
     border-radius: 0 var(--border-radius) var(--border-radius) 0;
     cursor: pointer;
     transition: var(--transition);
+    white-space: nowrap;
 }
 
 .newsletter-form button:hover {
     background-color: var(--secondary-color);
 }
+
+/* Responsive fix for very small screens */
+@media (max-width: 400px) {
+    .newsletter-form input {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .newsletter-form button {
+        padding: 0 15px;
+        font-size: 0.9rem;
+    }
+}
+
 
 .footer-bottom {
     text-align: center;
